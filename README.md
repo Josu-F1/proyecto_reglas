@@ -1,16 +1,7 @@
 # Proyecto: Reglas de Asociación (Apriori) y Reglas de Clasificación (PRISM)
 
 Este proyecto contiene dos algoritmos de minería de reglas implementados
-**desde cero en Python** (sin librerías tipo `mlxtend`), siguiendo paso a
-paso el material de referencia entregado en clase:
-
-- `Apriori_Algorithm_Walkthrough.pdf` → Fase 0 (cobertura mínima), Fase 1
-  (itemsets frecuentes por pares **Atributo=Valor**) y Fase 2 (generación
-  de reglas / "explosión combinatoria").
-- `Reglas_PRISM.pdf` → pseudocódigo `Recubrimiento_secuencial`,
-  `AprenderUnaRegla` y `mejorRestriccion`, con confianza, soporte y
-  cobertura como medidas de evaluación.
-
+**desde cero en Python** 
 ```
 proyecto_reglas/
 │
@@ -51,15 +42,8 @@ cd apriori
 python main_apriori.py
 ```
 
-### Cómo se implementó (igual que el walkthrough en PDF)
+### Cómo se implementó
 
-**Dato clave:** el dataset tiene columnas binarias (`Leche`, `Pan`, ... con
-valores 1/0). Siguiendo exactamente el ejemplo del PDF, **cada columna se
-trata como un atributo con dos posibles valores**, y se generan ítems del
-tipo `"Leche=1"`, `"Leche=0"`, `"Pan=1"`, `"Pan=0"`, etc. — NO sólo los
-productos comprados. Esto permite descubrir tanto reglas de "productos
-comprados juntos" como reglas de "productos NO comprados juntos"
-(ej. `SI Cafe=0 ENTONCES Azucar=0`).
 
 1. **Fase 0 — Cobertura mínima:** se traduce el soporte estadístico
    (ej. `0.67`) a un umbral absoluto de registros:
