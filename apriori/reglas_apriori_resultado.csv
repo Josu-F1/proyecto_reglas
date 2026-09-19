@@ -1,0 +1,4 @@
+﻿antecedente,consecuente,cobertura,cobertura_antecedente,soporte,confianza,lift
+Leche=1,Pan=1,750,800,0.75,0.9375,1.1029
+Pan=1,Leche=1,750,850,0.75,0.8824,1.1029
+Azucar=0,Pan=1,701,813,0.701,0.8622,1.0144
